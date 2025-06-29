@@ -1,4 +1,4 @@
-from flask import Flask, render_template, ruquests
+from flask import Flask, render_template, request
 from sklearn.linear_model import LogisticRegression
 import pickle
 
