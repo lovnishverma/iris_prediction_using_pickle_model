@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Iris Flower Classifier</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f2f2f2;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        input[type="text"], input[type="submit"] {
+            width: 90%;
+            padding: 8px;
+            margin: 10px 0;
+        }
+        .result {
+            margin-top: 15px;
+            font-weight: bold;
+            color: green;
+        }
+        img {
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Iris Flower Prediction</h2>
+        <form method="POST" action="/predict">
+            <input type="text" name="swidth" placeholder="Sepal Width" required><br>
+            <input type="text" name="sheight" placeholder="Sepal Height" required><br>
+            <input type="text" name="pwidth" placeholder="Petal Width" required><br>
+            <input type="text" name="pheight" placeholder="Petal Height" required><br>
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if data %}
+            <div class="result">The Flower Name is: {{ data }}</div>
+
+            {% if data == "setosa" %}
+                <img src="https://cdn-uploads.huggingface.co/production/uploads/6474405f90330355db146c76/wi5XEAVfDpNnTDM-cFlPE.png" alt="Iris Setosa">
+            {% elif data == "versicolor" %}
+                <img src="https://cdn-uploads.huggingface.co/production/uploads/6474405f90330355db146c76/6aXkk_yp48P48-Fse89gY.png" alt="Iris Versicolor">
+            {% elif data == "virginica" %}
+                <img src="https://cdn-uploads.huggingface.co/production/uploads/6474405f90330355db146c76/5TvdKlzh0RqGWzQx9dgE3.png" alt="Iris Virginica">
+            {% endif %}
+        {% endif %}
+    </div>
+</body>
+</html>
