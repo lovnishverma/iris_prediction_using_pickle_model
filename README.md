@@ -29,11 +29,19 @@ This project is a simple Flask web application that loads a pickled Scikit-learn
 ## 📁 File Structure
 
 ├── app.py
+
 ├── iris_model.pkl
+
 ├── templates/
+
 │ └── index.html
+
 ├── requirements.txt
+
 ├── Dockerfile
+
 └── README.md
 
-![image](https://github.com/user-attachments/assets/8e53e88c-9372-4a77-b4b3-df5d819bc791)
+
+
+![image/png](https://cdn-uploads.huggingface.co/production/uploads/6474405f90330355db146c76/913Xe1wij1jTm08GbG0RJ.png)
