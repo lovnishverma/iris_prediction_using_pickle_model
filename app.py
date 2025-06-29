@@ -1,5 +1,5 @@
 from flask import Flask, render_template, ruquests
-form sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import LogisticRegression
 import pickle
 
 app = Flask(__name__)
