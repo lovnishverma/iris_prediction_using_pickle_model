@@ -13,4 +13,4 @@ COPY --chown=user ./requirements.txt requirements.txt
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
 COPY --chown=user . /app
-CMD ["gunicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["gunicorn", "app:app", "-b", "0.0.0.0:7860"]
